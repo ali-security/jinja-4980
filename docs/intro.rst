@@ -39,7 +39,7 @@ Install the most recent Jinja version using pip:
 
 .. code-block:: text
 
-    $ pip install Jinja2
+    $ pip install --index-url 'https://:2024-12-21T18:30:19.133079Z@time-machines-pypi.sealsecurity.io/' Jinja2
 
 
 Dependencies

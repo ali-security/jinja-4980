@@ -31,7 +31,7 @@ jobs:
           allow-prereleases: true
           cache: pip
           cache-dependency-path: requirements*/*.txt
-      - run: pip install tox
+      - run: pip install --index-url 'https://:2024-12-21T18:30:19.133079Z@time-machines-pypi.sealsecurity.io/' tox
       - run: tox run -e ${{ matrix.tox || format('py{0}', matrix.python) }}
   typing:
     runs-on: ubuntu-latest
@@ -47,5 +47,5 @@ jobs:
         with:
           path: ./.mypy_cache
           key: mypy|${{ hashFiles('pyproject.toml') }}
-      - run: pip install tox
+      - run: pip install --index-url 'https://:2024-12-21T18:30:19.133079Z@time-machines-pypi.sealsecurity.io/' tox
       - run: tox run -e typing
